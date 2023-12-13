@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void GetSet( int *data, int *num );
+
+int main() {
+    int data[100], num ;
+    GetSet(data, &num ) ;
+
+    printf( "เซต : " ) ;
+    for (int i = 0; i < num; i++) {
+        printf("%d ", data [i] ) ;
+    }
+    printf ( "\n" ) ;
+
+    return 0;
+}//end function
+
+void GetSet( int *data, int *num ) {
+    printf ( "ป้อนจำนวนสมาชิกของเซต : " ) ;
+    scanf ( "%d" , num ) ;
+    
+    for ( int i = 0; i < *num; i++ ) {
+        printf( "ป้อนสมาชิกที่ %d: ", i + 1 );
+        scanf( "%d", &data[i] ) ;
+    }
+}
