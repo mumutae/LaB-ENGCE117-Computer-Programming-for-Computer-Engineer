@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void GetMatrix(int value[][100], int *row, int *col);
+
+int main() {
+    int data[100][100], m, n ;
+    GetMatrix(data, &m, &n ) ; 
+
+    return 0;
+}//end function
+
+void GetMatrix(int value[][100], int *row, int *col ) {
+    printf( "ป้อนจำนวนแถวของเมทริกซ์ : " ) ;
+    scanf( "%d", row ) ;
+
+    printf( "ป้อนจำนวนคอลัมน์ของเมทริกซ์: " ) ;
+    scanf( "%d" , col ) ;
+
+    for ( int i = 0; i < *row; i++ ) {
+        for ( int j = 0; j < *col; j++ ) {
+            printf("ป้อนค่าของเมทริกซ์ที่ (%d, %d): ", i + 1, j + 1 ) ;
+            scanf("%d", &value[i][j] ) ;
+        }
+    }
+}
